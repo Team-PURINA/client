@@ -9,18 +9,16 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"compilerOptions": {
-			"module": "commonjs",
-			"baseUrl": ".",
-			"paths": {
-				"$lib": ["src/lib"],
-				"$lib/*": ["src/lib/*"],
-				"$base": ["src/baseApp"],
-				"$base/*": ["src/baseApp/*"]
-			}
-		},
-		"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
-	}
+		"module": "ESNext",
+		"baseUrl": ".",
+		"paths": {
+			"$lib": ["src/lib"],
+			"$lib/*": ["src/lib/*"],
+			"$base": ["src/baseApp"],
+			"$base/*": ["src/baseApp/*"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
