@@ -5,7 +5,7 @@
 	import AsideList from './AsideList.svelte';
 </script>
 
-<div class=" bg-[#212121] w-64 h-full py-2 flex flex-col items-center gap-3">
+<div class=" bg-[#212121] w-64 h-full py-2 flex flex-col items-center gap-3 overflow-scroll">
 	<div class=" flex flex-col gap-8 py-6 border-b-[1px] border-b-solid border-b-[#2C2C2C]">
 		<AsideHead />
 		<a

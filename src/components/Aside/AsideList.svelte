@@ -5,6 +5,7 @@
 	import TradeRecordIcon from '../../assets/TradeRecordIcon.svelte';
 	import WalletIcon from '../../assets/WalletIcon.svelte';
 	import classNames from 'classnames';
+	import AsideCoinList from './AsideCoinList.svelte';
 
 	const pages = [
 		{ name: '홈', component: HomeIcon },
@@ -21,18 +22,23 @@
 	};
 </script>
 
-<div class=" flex flex-col items-center justify-center py-4">
-	{#each pages as page (page)}
-		<button
-			on:click={() => handlePageButtonClick(page.name)}
-			id={page.name}
-			class={classNames(
-				' hover:bg-[#242424] w-52 flex items-center px-5 py-4 gap-4 rounded-md',
-				page.name === currentPage && 'bg-[#2C2C2C]'
-			)}
-		>
-			<svelte:component this={page.component} />
-			<span class=" text-[#018FC6] text-sm font-semibold">{page.name}</span>
-		</button>
-	{/each}
+<div class="w-full flex flex-col items-center justify-center py-2">
+	{#if currentPage === '거래'}
+		<AsideCoinList />
+	{/if}
+	<div class="flex flex-col items-center justify-center py-4">
+		{#each pages as page (page)}
+			<button
+				on:click={() => handlePageButtonClick(page.name)}
+				id={page.name}
+				class={classNames(
+					' hover:bg-[#242424] w-52 flex items-center px-5 py-4 gap-4 rounded-md',
+					page.name === currentPage && 'bg-[#2C2C2C]'
+				)}
+			>
+				<svelte:component this={page.component} />
+				<span class=" text-[#018FC6] text-sm font-semibold">{page.name}</span>
+			</button>
+		{/each}
+	</div>
 </div>
