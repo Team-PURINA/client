@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Aside from '../components/Aside/Aside.svelte';
 </script>
 

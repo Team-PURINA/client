@@ -48,7 +48,7 @@
 	</p>
 	<img
 		class="absolute bottom-[-52px] right-[-50px] w-[14.625rem] h-[14.625rem]"
-		src="/Preact.png"
+		src="/preact-bg.png"
 		alt="Preact background"
 	/>
 </div>
