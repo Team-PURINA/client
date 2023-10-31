@@ -1,7 +1,7 @@
 <script lang="ts">
 	import classNames from 'classnames';
+	import { slide } from 'svelte/transition';
 	import ProfitText from '../ProfitText/ProfitText.svelte';
-	import { fade, fly, slide } from 'svelte/transition';
 
 	const coins = [
 		{ src: 'svelte.png', name: 'SLT', isProfit: false, percentage: 4.2 },

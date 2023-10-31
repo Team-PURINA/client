@@ -1,9 +1,9 @@
 <script lang="ts">
-	import HomeIcon from '../../assets/HomeIcon.svelte';
-	import NoticeIcon from '../../assets/NoticeIcon.svelte';
-	import TradeIcon from '../../assets/TradeIcon.svelte';
-	import TradeRecordIcon from '../../assets/TradeRecordIcon.svelte';
-	import WalletIcon from '../../assets/WalletIcon.svelte';
+	import HomeIcon from '@/assets/HomeIcon.svelte';
+	import NoticeIcon from '@/assets/NoticeIcon.svelte';
+	import TradeIcon from '@/assets/TradeIcon.svelte';
+	import TradeRecordIcon from '@/assets/TradeRecordIcon.svelte';
+	import WalletIcon from '@/assets/WalletIcon.svelte';
 	import classNames from 'classnames';
 	import AsideCoinList from './AsideCoinList.svelte';
 

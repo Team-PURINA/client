@@ -1,6 +1,6 @@
 <script>
-	import LogoutIcon from '../../assets/LogoutIcon.svelte';
-	import { ROUTER } from '../../constants';
+	import LogoutIcon from '@/assets/LogoutIcon.svelte';
+	import { ROUTER } from '@/constants';
 	import AsideHead from './AsideHead.svelte';
 	import AsideList from './AsideList.svelte';
 </script>
