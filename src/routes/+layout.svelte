@@ -1,9 +1,13 @@
 <script>
 	import '../app.scss';
+	import Aside from '../components/Aside/Aside.svelte';
 </script>
 
-<div class="w-full h-[100vh] bg-[#1E2227]">
-	<slot />
+<div class="w-full h-fit bg-[#1E2227] flex">
+	<Aside />
+	<div class="ml-64">
+		<slot />
+	</div>
 </div>
 
 <style>
