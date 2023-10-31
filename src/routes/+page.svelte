@@ -1,11 +1,7 @@
 <script>
-	import Card from 'src/components/Card/Card.svelte';
+	import Aside from '../components/Aside/Aside.svelte';
 </script>
 
-<Card
-	classname="from-[#673AB8] to-[#DBC7FF]"
-	coinName="Preact"
-	price={340_281_000}
-	varianceRate={1.8}
-	variancePrice={80_500_000}
-/>
+<div class="w-full h-full bg-[#1E2227] flex items-center">
+	<Aside />
+</div>
