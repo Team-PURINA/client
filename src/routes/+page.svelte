@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Aside from '../components/Aside/Aside.svelte';
+</script>
+
+<div class="w-full h-[100vh] bg-[#1E2227] flex items-center">
+	<Aside />
+</div>
