@@ -3,21 +3,17 @@
 	import { ROUTER } from '../../constants';
 	import AsideHead from './AsideHead.svelte';
 	import AsideList from './AsideList.svelte';
-	import { push } from 'svelte-spa-router';
-
-	const handleLoginButtonClick = () => {
-		push(ROUTER.LOGIN);
-	};
 </script>
 
 <div class=" bg-[#212121] w-64 h-full py-2 flex flex-col items-center gap-3">
 	<div class=" flex flex-col gap-8 py-6 border-b-[1px] border-b-solid border-b-[#2C2C2C]">
 		<AsideHead />
-		<button
-			on:click={handleLoginButtonClick}
+		<a
+			href={ROUTER.LOGIN}
 			class=" flex items-center justify-center text-base text-white font-normal py-[10px] px-20 bg-[#2C2C2C] rounded-md"
-			>로그인</button
 		>
+			로그인
+		</a>
 	</div>
 	<AsideList />
 	<button
