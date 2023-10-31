@@ -8,10 +8,10 @@
 
 <a href="/notice/{id}" class="w-full">
 	<div class="w-full h-fit px-[1.4375rem] pt-[1.3125rem] pb-3.5 cursor-pointer">
-		<p class="mb-1 text-white text-xl leading-normal not-italic font-semibold">
+		<p class="mb-1 text-white text-xl leading-normal font-semibold">
 			{title}
 		</p>
-		<p class="text-[#888] text-sm leading-normal not-italic font-semibold">
+		<p class="text-[#888] text-sm leading-normal font-semibold">
 			{format(new Date(date), 'yyyy.dd.MM.')}
 		</p>
 	</div>
