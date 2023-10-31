@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NoticeItem from '../NoticeItem/NoticeItem.svelte';
+	import NoticeItem from './NoticeItem.svelte';
 
 	const NOTICE_LIST = [
 		{
