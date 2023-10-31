@@ -5,7 +5,7 @@
 
 <div class="w-full h-fit bg-[#1E2227] flex">
 	<Aside />
-	<div class="ml-64">
+	<div class="ml-64 w-full">
 		<slot />
 	</div>
 </div>
