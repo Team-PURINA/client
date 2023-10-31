@@ -1,6 +1,6 @@
 <script lang="ts">
-	import LossIcon from '../../assets/LossIcon.svelte';
-	import ProfitIcon from '../../assets/ProfitIcon.svelte';
+	import LossIcon from '@/assets/LossIcon.svelte';
+	import ProfitIcon from '@/assets/ProfitIcon.svelte';
 
 	export let isProfit: Boolean;
 	export let percentage: number;
