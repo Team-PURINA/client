@@ -3,3 +3,9 @@
 </script>
 
 <slot />
+
+<style>
+	:global(p) {
+		font-family: Pretendard;
+	}
+</style>
