@@ -14,7 +14,7 @@
 
 <div
 	class={classnames(
-		'rounded-2xl w-[26.875rem] h-[16.25rem]  pt-[1.375rem] pb-[2.625rem] px-7 bg-gradient-to-br flex flex-col justify-between',
+		'rounded-2xl w-[26.875rem] h-[16.25rem] pt-[1.375rem] pb-[2.625rem] px-7 bg-gradient-to-br flex flex-col justify-between relative overflow-hidden',
 		classname
 	)}
 >
@@ -46,4 +46,9 @@
 	<p class="text-white text-lg leading-normal not-italic font-normal font-['BCcardB']">
 		9440-3232-1780-2341
 	</p>
+	<img
+		class="absolute bottom-[-52px] right-[-50px] w-[14.625rem] h-[14.625rem]"
+		src="/Preact.png"
+		alt="Preact background"
+	/>
 </div>
