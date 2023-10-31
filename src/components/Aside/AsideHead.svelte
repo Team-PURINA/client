@@ -1,5 +1,5 @@
 <script>
-	import Logo from '../../assets/Logo.svelte';
+	import Logo from '@/assets/Logo.svelte';
 </script>
 
 <div class=" flex items-center justify-center gap-4">

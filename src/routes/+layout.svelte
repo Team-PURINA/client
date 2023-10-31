@@ -1,11 +1,11 @@
 <script>
-	import '../app.scss';
+	import '@/app.scss';
 	import Aside from '../components/Aside/Aside.svelte';
 </script>
 
-<div class="w-full h-fit bg-[#1E2227] flex">
+<div class="h-screen flex">
 	<Aside />
-	<div class="ml-64 w-full">
+	<div class="h-screen overflow-auto flex-1 bg-[#1E2227]">
 		<slot />
 	</div>
 </div>
