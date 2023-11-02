@@ -6,6 +6,7 @@
 	export let classname: string;
 
 	export let coinName: string;
+	export let src: string;
 
 	export let price: number;
 	export let variancePrice: number;
@@ -19,7 +20,7 @@
 	)}
 >
 	<div>
-		<p class="text-[#CCC] text-[1.375rem] leading-normal font-medium">{coinName}</p>
+		<p class="text-[#DDD] text-[1.375rem] leading-normal font-medium">{coinName}</p>
 		<p class="mb-2 text-white text-[1.75rem] leading-normal font-extrabold">
 			${price.toLocaleString('ru-RU')}
 		</p>
@@ -45,8 +46,8 @@
 	</div>
 	<p class="text-white text-lg leading-normal font-normal font-['BCcardB']">9440-3232-1780-2341</p>
 	<img
-		class="absolute bottom-[-52px] right-[-50px] w-[14.625rem] h-[14.625rem]"
-		src="/preact-bg.png"
-		alt="Preact background"
+		class="absolute bottom-[-30px] right-[-50px] h-[14.625rem]"
+		{src}
+		alt="{coinName} background"
 	/>
 </div>
