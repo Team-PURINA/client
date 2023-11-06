@@ -1,5 +1,5 @@
 <script lang="ts">
-	import classnames from 'classnames';
+	import classNames from 'classnames';
 	import DecreaseArrowIcon from 'src/assets/DecreaseArrowIcon.svelte';
 	import IncreaseArrowIcon from 'src/assets/IncreaseArrowIcon.svelte';
 
@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class={classnames(
+	class={classNames(
 		'rounded-2xl w-[26.875rem] h-[16.25rem] pt-[1.375rem] pb-[2.625rem] px-7 bg-gradient-to-br flex flex-col justify-between relative overflow-hidden',
 		classname
 	)}
@@ -30,7 +30,7 @@
 				<DecreaseArrowIcon />
 			{/if}
 			<p
-				class={classnames(
+				class={classNames(
 					'ml-1 text-xs leading-normal not-italic font-semibold',
 					varianceRate > 0 ? 'text-[#00F919]' : 'text-[#FF5454]'
 				)}

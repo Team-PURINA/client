@@ -14,4 +14,7 @@
 	:global(p) {
 		font-family: Pretendard;
 	}
+	:global(button) {
+		font-family: Pretendard;
+	}
 </style>
