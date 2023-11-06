@@ -95,7 +95,7 @@
 		블록체인의 각 블록들을 클릭하여 거래 내역을 확인할 수 있어요.
 	</p>
 	<div class="flex items-center overflow-auto scrollbar-hide">
-		{#each TRADE_LIST.toReversed() as { id, classnames } (id)}
+		{#each TRADE_LIST as { id, classnames } (id)}
 			<TradeBlock {id} {classnames} />
 		{/each}
 	</div>

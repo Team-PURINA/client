@@ -2,6 +2,7 @@
 	import classNames from 'classnames';
 
 	let screen: '매수' | '매도' = '매수';
+	const rates = [25, 50, 75, 100];
 </script>
 
 <div class="w-[16.25rem] px-[1.625rem] flex flex-col justify-between shrink-0">
@@ -51,26 +52,13 @@
 					<p class="text-[#788293] text-[0.625rem] font-semibold">SLT</p>
 				</div>
 				<div class="flex justify-between">
-					<button
-						class="w-8 h-5 rounded border-[0.03125rem] border-solid border-[#788293] text-[0.5rem] text-white"
-					>
-						25%
-					</button>
-					<button
-						class="w-8 h-5 rounded border-[0.03125rem] border-solid border-[#788293] text-[0.5rem] text-white"
-					>
-						50%
-					</button>
-					<button
-						class="w-8 h-5 rounded border-[0.03125rem] border-solid border-[#788293] text-[0.5rem] text-white"
-					>
-						75%
-					</button>
-					<button
-						class="w-8 h-5 rounded border-[0.03125rem] border-solid border-[#788293] text-[0.5rem] text-white"
-					>
-						100%
-					</button>
+					{#each rates as rate (rate)}
+						<button
+							class="w-8 h-5 rounded border-[0.03125rem] border-solid border-[#788293] text-[0.5rem] text-white"
+						>
+							{rate}%
+						</button>
+					{/each}
 				</div>
 			</div>
 		</div>
