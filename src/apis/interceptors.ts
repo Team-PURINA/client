@@ -2,9 +2,9 @@ import TOKEN from '@/constants/storage.constant';
 import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { axiosInstance } from '.';
 
-export const responseOnFulfilled = (res: AxiosResponse) => {
+export const responseOnFulfilled = async (res: AxiosResponse) => {
 	if (res.status >= 400) {
-		return Promise.reject(res.data);
+		throw new Error(res.data);
 	}
 
 	return res;
@@ -14,8 +14,9 @@ export const responseOnRejected = async (error: AxiosError) => {
 	const { config } = error;
 	const originalRequest = config;
 
-	if (error.response?.status === 401 && config?.url !== '/login') {
+	if (error.response?.status === 401) {
 		try {
+			console.log('test');
 			const {
 				data: { accessToken }
 			} = await axiosInstance.put('/login', null, {
@@ -26,16 +27,16 @@ export const responseOnRejected = async (error: AxiosError) => {
 
 			localStorage.setItem(TOKEN.ACCESS_TOKEN, accessToken);
 
-			if (originalRequest) return Promise.resolve(axiosInstance(originalRequest));
+			if (originalRequest) return axiosInstance(originalRequest);
 		} catch (e) {
-			return Promise.reject(e);
+			throw e as Error;
 		}
 	}
 
-	return Promise.reject(error);
+	return error;
 };
 
-export const requestOnFulfilled = (config: InternalAxiosRequestConfig) => {
+export const requestOnFulfilled = async (config: InternalAxiosRequestConfig) => {
 	const accessToken = localStorage.getItem(TOKEN.ACCESS_TOKEN);
 
 	if (!config.headers || !accessToken) return config;

@@ -1,4 +1,5 @@
 <script>
+	import { axiosInstance } from '@/apis';
 	import TOKEN from '@/constants/storage.constant';
 	import { onMount } from 'svelte';
 	import BlockModal from '../components/Modal/BlockModal.svelte';
@@ -9,7 +10,13 @@
 	onMount(() => {
 		if (window) {
 			const accessToken = window.localStorage.getItem(TOKEN.ACCESS_TOKEN);
-			console.log(accessToken);
+			axiosInstance
+				.get('/user', {
+					headers: {
+						Authorization: accessToken
+					}
+				})
+				.then((result) => console.log(result.data));
 		}
 	});
 </script>

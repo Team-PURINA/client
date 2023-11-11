@@ -1,9 +1,10 @@
 import axios from 'axios';
 
+import { env } from '$env/dynamic/public';
 import { requestOnFulfilled, responseOnFulfilled, responseOnRejected } from './interceptors';
 
 export const axiosInstance = axios.create({
-	baseURL: 'http://localhost:8080',
+	baseURL: env.PUBLIC_AXIOS_BASE_URL,
 	timeout: 10000,
 	headers: {
 		'Content-Type': 'application/json'
