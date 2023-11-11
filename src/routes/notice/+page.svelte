@@ -1,5 +1,8 @@
 <script>
 	import NoticeList from '@/components/NoticeList/NoticeList.svelte';
+	import useGetNoticeListQuery from '@/hooks/notice/useGetNoticeListQuery.hook';
+
+	const query = useGetNoticeListQuery();
 </script>
 
 <div class="w-full h-full py-9 px-10">
@@ -12,5 +15,7 @@
 			공지 작성
 		</a>
 	</div>
-	<NoticeList />
+	{#if $query.isSuccess}
+		<NoticeList noticeList={$query.data} />
+	{/if}
 </div>

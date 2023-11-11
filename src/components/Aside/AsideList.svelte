@@ -17,7 +17,7 @@
 		{ name: '지갑', icon: WalletIcon, href: '/wallet' }
 	];
 
-	let currentPageHref = $page.route.id;
+	$: currentPageHref = $page.route.id;
 
 	const handlePageButtonClick = (pageHref: string) => {
 		goto(pageHref);
