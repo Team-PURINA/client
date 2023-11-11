@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import useDeleteNoticeMutation from '@/hooks/notice/detail/useDeleteNoticeMutation.hook';
 	import useGetNoticeQuery from '@/hooks/notice/detail/useGetNoticeQuery.hook';
-	import { format } from 'date-fns';
+	import dayjs from 'dayjs';
 	import NoticeLogoIcon from '../../../assets/NoticeLogoIcon.svelte';
 
 	const { id } = $page.params;
@@ -20,14 +20,12 @@
 			<span class=" font-semibold text-4xl text-white">{notice.title}</span>
 			<div class="flex items-center mt-1">
 				<span class=" font-medium text-[#888888] text-base">
-					{format(new Date(notice.createdAt), 'yyyy.dd.MM.')} · {notice.user.name}
+					{dayjs(notice.createdAt).format('YYYY.DD.MM.')} · {notice.user.name}
 				</span>
 				{#if isAdmin}
 					<button
 						class="rounded-sm ml-auto py-1 px-3 bg-[#FF5454] text-white text-sm font-medium w-fit"
-						on:click={() => {
-							$mutation.mutate(id);
-						}}
+						on:click={() => $mutation.mutate(id)}
 					>
 						공지 삭제
 					</button>

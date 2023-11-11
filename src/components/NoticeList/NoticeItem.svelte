@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { format } from 'date-fns';
+	import dayjs from 'dayjs';
 
 	export let id: number;
 	export let title: string;
@@ -13,7 +13,7 @@
 			{title}
 		</p>
 		<p class="text-[#888] text-sm leading-normal not-italic font-semibold">
-			{format(new Date(createdAt), 'yyyy.dd.MM.')}
+			{dayjs(createdAt).format('YYYY.DD.MM.')}
 		</p>
 	</div>
 	<p class="text-[#888] font-semibold text-sm mr-8">{author}</p>

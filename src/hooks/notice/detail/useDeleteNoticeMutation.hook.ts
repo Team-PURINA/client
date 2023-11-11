@@ -6,9 +6,7 @@ import { createMutation } from '@tanstack/svelte-query';
 const useDeleteNoticeMutation = () => {
 	return createMutation({
 		mutationFn: deleteNotice,
-		onSuccess: () => {
-			goto(ROUTER.NOTICE);
-		}
+		onSuccess: () => goto(ROUTER.NOTICE)
 	});
 };
 
