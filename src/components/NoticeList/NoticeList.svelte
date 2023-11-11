@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NoticeItem from './NoticeItem.svelte';
 
-	export let noticeList: { id: number; title: string; createdAt: string; user: { name: string } }[];
+	export let noticeList: { id: number; title: string; createdAt: string; userName: string }[];
 </script>
 
 {#each noticeList as notice (notice.id)}
@@ -9,6 +9,6 @@
 		id={notice.id}
 		title={notice.title}
 		createdAt={notice.createdAt}
-		author={notice.user.name}
+		author={notice.userName}
 	/>
 {/each}
