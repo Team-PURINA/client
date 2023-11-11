@@ -13,7 +13,7 @@
 
 {#if notice}
 	<div class="flex flex-col items-center px-24 py-20 gap-16">
-		<div class="flex flex-col gap-2">
+		<div class="w-full flex flex-col gap-2">
 			<span class=" font-semibold text-4xl text-white">{notice.title}</span>
 			<div class="flex items-center mt-1">
 				<span class=" font-medium text-[#888888] text-base"
