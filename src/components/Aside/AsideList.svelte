@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import HomeIcon from '@/assets/HomeIcon.svelte';
 	import NoticeIcon from '@/assets/NoticeIcon.svelte';
 	import TradeIcon from '@/assets/TradeIcon.svelte';
@@ -16,7 +17,7 @@
 		{ name: '지갑', icon: WalletIcon, href: '/wallet' }
 	];
 
-	let currentPageHref = '/';
+	let currentPageHref = $page.route.id;
 
 	const handlePageButtonClick = (pageHref: string) => {
 		goto(pageHref);
