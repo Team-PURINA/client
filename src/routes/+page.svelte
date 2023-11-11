@@ -1,24 +1,8 @@
 <script>
-	import { axiosInstance } from '@/apis';
-	import TOKEN from '@/constants/storage.constant';
-	import { onMount } from 'svelte';
 	import BlockModal from '../components/Modal/BlockModal.svelte';
 	import Modal from '../components/Modal/Modal.svelte';
 
 	let showModal = false;
-
-	onMount(() => {
-		if (window) {
-			const accessToken = window.localStorage.getItem(TOKEN.ACCESS_TOKEN);
-			axiosInstance
-				.get('/user', {
-					headers: {
-						Authorization: accessToken
-					}
-				})
-				.then((result) => console.log(result.data));
-		}
-	});
 </script>
 
 <div class=" w-full h-[100vh] flex items-center justify-center">
