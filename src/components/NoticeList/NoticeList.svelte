@@ -1,5 +1,5 @@
 <script lang="ts">
-	import useGetNoticeListQuery from '@/hooks/notice/useGetNoticeList.hook';
+	import useGetNoticeListQuery from '@/hooks/notice/useGetNoticeListQuery.hook';
 	import NoticeItem from './NoticeItem.svelte';
 
 	const query = useGetNoticeListQuery();

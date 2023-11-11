@@ -1,10 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import useGetNotice from '@/hooks/notice/detail/useGetNotice.hook';
+	import useGetNoticeQuery from '@/hooks/notice/detail/useGetNoticeQuery.hook';
 	import { format } from 'date-fns';
 	import NoticeLogoIcon from '../../../assets/NoticeLogoIcon.svelte';
 
-	const query = useGetNotice($page.params.id);
+	const query = useGetNoticeQuery($page.params.id);
 
 	$: notice = $query.data;
 
