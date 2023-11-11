@@ -1,5 +1,5 @@
 const KEY = {
-	NOTICE_LIST: 'noticeList'
+	NOTICE: 'notice'
 };
 
 export default KEY;

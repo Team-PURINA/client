@@ -4,7 +4,7 @@ import { createQuery } from '@tanstack/svelte-query';
 
 const useGetNoticeListQuery = () => {
 	return createQuery({
-		queryKey: [KEY.NOTICE_LIST],
+		queryKey: [KEY.NOTICE],
 		queryFn: getNoticeList
 	});
 };
