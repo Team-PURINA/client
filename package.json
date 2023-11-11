@@ -31,7 +31,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tanstack/svelte-query": "^5.8.1",
 		"autoprefixer": "^10.4.16",
+		"axios": "^1.6.0",
 		"classnames": "^2.3.2",
 		"date-fns": "^2.30.0",
 		"postcss": "^8.4.30",
