@@ -16,12 +16,11 @@ export const responseOnRejected = async (error: AxiosError) => {
 
 	if (error.response?.status === 401) {
 		try {
-			console.log('test');
 			const {
 				data: { accessToken }
 			} = await axiosInstance.put('/login', null, {
 				headers: {
-					[TOKEN.REFRESH_TOKEN]: localStorage.getItem(TOKEN.REFRESH_TOKEN)
+					'Refresh-Token': localStorage.getItem(TOKEN.REFRESH_TOKEN)
 				}
 			});
 
