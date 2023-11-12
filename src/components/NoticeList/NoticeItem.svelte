@@ -13,7 +13,7 @@
 			{title}
 		</p>
 		<p class="text-[#888] text-sm leading-normal not-italic font-semibold">
-			{dayjs(createdAt).format('YYYY.DD.MM.')}
+			{dayjs(createdAt).format('YYYY.MM.DD.')}
 		</p>
 	</div>
 	<p class="text-[#888] font-semibold text-sm mr-8">{author}</p>

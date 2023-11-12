@@ -20,7 +20,7 @@
 			<span class=" font-semibold text-4xl text-white">{notice.title}</span>
 			<div class="flex items-center mt-1">
 				<span class=" font-medium text-[#888888] text-base">
-					{dayjs(notice.createdAt).format('YYYY.DD.MM.')} · {notice.user.name}
+					{dayjs(notice.createdAt).format('YYYY.MM.DD.')} · {notice.user.name}
 				</span>
 				{#if isAdmin}
 					<button
