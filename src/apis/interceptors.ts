@@ -10,11 +10,18 @@ export const responseOnFulfilled = async (res: AxiosResponse) => {
 	return res;
 };
 
+/* todo : 다시 짜ㅣㄱ */
 export const responseOnRejected = async (error: AxiosError) => {
 	const { config } = error;
 	const originalRequest = config;
 
-	if (error.response?.status === 401) {
+	if (config?.url === '/login' && config?.method === 'put') {
+		localStorage.removeItem(TOKEN.ACCESS_TOKEN);
+		localStorage.removeItem(TOKEN.REFRESH_TOKEN);
+		return;
+	}
+
+	if (error.response?.status === 403) {
 		try {
 			const {
 				data: { accessToken }
