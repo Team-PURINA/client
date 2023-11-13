@@ -1,5 +1,5 @@
-import KEY from '@/constants/queryKey.constant';
-import getNotice from '@/services/notice/detail/getNotice';
+import { KEY } from '@/constants';
+import { getNotice } from '@/services/';
 import { createQuery } from '@tanstack/svelte-query';
 
 const useGetNoticeQuery = (id: string) => {
