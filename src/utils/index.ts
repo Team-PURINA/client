@@ -1,1 +1,1 @@
-export { default as autoResizing } from './autoresizing';
+export { default as autoResizing } from './autoResizing';
