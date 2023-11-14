@@ -39,18 +39,18 @@
 			<p class="text-[#788293] font-semibold text-[0.625rem]">주문가격</p>
 			<p class="text-white font-semibold text-sm">$438 200 570</p>
 		</div>
-		<div class="flex gap-2.5 mb-1.5">
+		<div class="gap-x-2.5 gap-y-1 mb-1.5 items-center grid" style="grid-template-columns: auto 1fr">
 			<p class="text-[#788293] font-semibold text-[0.625rem] break-keep">주문수량</p>
-			<div>
-				<div
-					class="w-40 h-6 rounded border-[0.03125rem] border-solid border-[#788293] bg-transparent flex items-center px-1 gap-1 mb-1"
-				>
-					<input
-						class=" flex-1 h-3 bg-transparent text-white text-[0.625rem] placeholder:text-[0.625rem] text-right"
-						placeholder="0.001"
-					/>
-					<p class="text-[#788293] text-[0.625rem] font-semibold">SLT</p>
-				</div>
+			<div
+				class="w-40 h-6 rounded border-[0.03125rem] border-solid border-[#788293] bg-transparent flex items-center px-1 gap-1"
+			>
+				<input
+					class="flex-1 h-3 bg-transparent text-white text-[0.625rem] placeholder:text-[0.625rem] text-right"
+					placeholder="0.001"
+				/>
+				<p class="text-[#788293] text-[0.625rem] font-semibold">SLT</p>
+			</div>
+			<div class="col-start-2 w-40">
 				<div class="flex justify-between">
 					{#each rates as rate (rate)}
 						<button
