@@ -1,7 +1,6 @@
 import { goto } from '$app/navigation';
-import { ROUTER } from '@/constants';
-import TOKEN from '@/constants/storage.constant';
-import getTokenByGoogle from '@/services/auth/getTokenByGoogle';
+import { ROUTER, TOKEN } from '@/constants';
+import { getTokenByGoogle } from '@/services';
 import { createMutation } from '@tanstack/svelte-query';
 
 const useGetTokenByGoogleMutation = () => {

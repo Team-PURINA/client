@@ -1,5 +1,5 @@
 <script>
-	import useGetTokenByGoogleMutation from '@/hooks/auth/useGetTokenByGoogleMutation.hook';
+	import { useGetTokenByGoogleMutation } from '@/hooks';
 	import { onMount } from 'svelte';
 
 	const mutation = useGetTokenByGoogleMutation();

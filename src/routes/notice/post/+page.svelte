@@ -1,5 +1,5 @@
 <script lang="ts">
-	import usePostNoticeMutation from '@/hooks/notice/post/usePostNoticeMutation.hook';
+	import { usePostNoticeMutation } from '@/hooks';
 	import { autoResizing } from '@/utils';
 	let title: string;
 	let content: string;

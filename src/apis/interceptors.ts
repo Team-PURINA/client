@@ -1,4 +1,4 @@
-import TOKEN from '@/constants/storage.constant';
+import { TOKEN } from '@/constants';
 import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { axiosInstance } from '.';
 

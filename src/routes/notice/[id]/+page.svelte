@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import useDeleteNoticeMutation from '@/hooks/notice/detail/useDeleteNoticeMutation.hook';
-	import useGetNoticeQuery from '@/hooks/notice/detail/useGetNoticeQuery.hook';
+	import { useDeleteNoticeMutation, useGetNoticeQuery } from '@/hooks';
 	import dayjs from 'dayjs';
 	import NoticeLogoIcon from '../../../assets/NoticeLogoIcon.svelte';
 

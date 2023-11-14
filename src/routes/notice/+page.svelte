@@ -1,6 +1,6 @@
 <script>
 	import NoticeList from '@/components/NoticeList/NoticeList.svelte';
-	import useGetNoticeListQuery from '@/hooks/notice/useGetNoticeListQuery.hook';
+	import { useGetNoticeListQuery } from '@/hooks';
 
 	const query = useGetNoticeListQuery();
 </script>

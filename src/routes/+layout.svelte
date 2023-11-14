@@ -1,7 +1,7 @@
 <script>
 	import { axiosInstance } from '@/apis';
 	import '@/app.scss';
-	import TOKEN from '@/constants/storage.constant';
+	import { TOKEN } from '@/constants';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 	import { onMount } from 'svelte';
 	import Aside from '../components/Aside/Aside.svelte';
