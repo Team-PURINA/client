@@ -1,8 +1,11 @@
 <script lang="ts">
+	import type { TradeData } from '@/types/trade';
 	import classNames from 'classnames';
 
 	let screen: '매수' | '매도' = '매수';
 	const rates = [25, 50, 75, 100];
+
+	export let tradeData: TradeData;
 </script>
 
 <div class="w-[16.25rem] px-[1.625rem] flex flex-col justify-between shrink-0">
@@ -15,6 +18,7 @@
 				)}
 				on:click={() => {
 					screen = '매수';
+					tradeData.tradeType = 'BUY';
 				}}
 			>
 				SLT 매수
@@ -26,6 +30,7 @@
 				)}
 				on:click={() => {
 					screen = '매도';
+					tradeData.tradeType = 'SELL';
 				}}
 			>
 				SLT 매도
@@ -47,6 +52,7 @@
 				<input
 					class="flex-1 h-3 bg-transparent text-white text-[0.625rem] placeholder:text-[0.625rem] text-right"
 					placeholder="0.001"
+					bind:value={tradeData.amount}
 				/>
 				<p class="text-[#788293] text-[0.625rem] font-semibold">SLT</p>
 			</div>
