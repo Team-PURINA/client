@@ -1,11 +1,11 @@
 import { axiosInstance } from '@/apis';
+import type { TradeData } from '@/types/trade';
 
-const doTrade = async (tradeData: {
-	amount: number;
-	coinName: string;
-	tradeType: 'BUY' | 'SELL';
-}) => {
-	const { data } = await axiosInstance.post('/trade', tradeData);
+const doTrade = async (tradeData: TradeData) => {
+	const { data } = await axiosInstance.post('/trade', {
+		...tradeData,
+		amount: +tradeData.amount
+	});
 	return data;
 };
 

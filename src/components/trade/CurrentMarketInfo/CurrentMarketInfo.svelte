@@ -59,6 +59,8 @@
 			value: 1324500
 		}
 	] as const;
+
+	export let coinName: string;
 </script>
 
 <div class="px-2 py-1 shrink-0">

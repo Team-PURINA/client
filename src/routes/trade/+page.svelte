@@ -24,9 +24,9 @@
 
 <div class="h-full py-8 px-5 flex flex-col mx-auto">
 	<div class="flex gap-[0.5625rem] justify-center mb-4">
-		<Graph />
-		<BuySellForm bind:tradeData />
+		<Graph coinName={tradeData.coinName} />
+		<BuySellForm bind:tradeData buySellMutation={mutation} />
 	</div>
-	<TradeHistory />
-	<CurrentMarketInfo />
+	<TradeHistory coinName={tradeData.coinName} />
+	<CurrentMarketInfo coinName={tradeData.coinName} />
 </div>

@@ -87,6 +87,8 @@
 			classnames: 'bg-gradient-to-tl'
 		}
 	] as const;
+
+	export let coinName: string;
 </script>
 
 <div class="pt-3 px-2.5 pb-1 mb-4 shrink-0">

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { useDoTradeMutation } from '@/hooks';
 	import type { TradeData } from '@/types/trade';
 	import classNames from 'classnames';
 
@@ -6,6 +7,8 @@
 	const rates = [25, 50, 75, 100];
 
 	export let tradeData: TradeData;
+
+	export let buySellMutation: ReturnType<typeof useDoTradeMutation>;
 </script>
 
 <div class="w-[16.25rem] px-[1.625rem] flex flex-col justify-between shrink-0">
@@ -14,7 +17,8 @@
 			<button
 				class={classNames(
 					'w-1/2 text-[#788293] py-1 text-xs border-b-2 border-solid border-0 border-transparent',
-					screen === '매수' && 'text-[#F75467] border-b-[#F75467] border-b-2 border-solid'
+					tradeData.tradeType === 'BUY' &&
+						'text-[#F75467] border-b-[#F75467] border-b-2 border-solid'
 				)}
 				on:click={() => {
 					screen = '매수';
@@ -80,8 +84,11 @@
 		</div>
 		<button
 			class="w-full h-[2.375rem] rounded bg-[#0083B6] text-sm font-semibold text-white mb-[1.375rem]"
+			on:click={() => {
+				$buySellMutation.mutate(tradeData);
+			}}
 		>
-			매도하기
+			{screen}하기
 		</button>
 	</div>
 </div>
