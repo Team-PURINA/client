@@ -1,5 +1,6 @@
 const KEY = {
-	NOTICE: 'notice'
+	NOTICE: 'notice',
+	BLOCK: 'BLOCK'
 };
 
 export default KEY;
