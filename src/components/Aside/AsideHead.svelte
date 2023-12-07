@@ -7,6 +7,6 @@
 	<h1
 		class="bg-gradient-to-r from-[#31BCF2] to-[#0A759E] text-transparent bg-clip-text text-2xl font-bold"
 	>
-		BUMACOIN
+		BYTE
 	</h1>
 </div>
